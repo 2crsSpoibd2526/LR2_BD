@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Объявления</title>
+</head>
+<body>
+<h1>Объявления</h1>
+<a href="/add/">Добавить объявление</a>
+{% for bb in bbs %}
+<h2>{{ bb.title }}</h2>
+<p>{{ bb.content }}</p>
+<p>Цена: {{ bb.price }}</p>
+<hr>
+{% empty %}
+<p>Объявлений нет</p>
+{% endfor %}
+</body>
+</html>
